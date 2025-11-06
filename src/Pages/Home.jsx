@@ -15,6 +15,7 @@ const Home = () => {
   const [showVerification, setShowVerification] = useState(false);
   const [showBirthday, setShowBirthday] = useState(false);
   const [verificationCompleted, setVerificationCompleted] = useState(false);
+  const [showHomeContent, setShowHomeContent] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 853 });
 
   useEffect(() => {
@@ -33,10 +34,12 @@ const Home = () => {
 
   const handleCloseVerification = () => {
     setShowVerification(false);
+    // Don't show home content if verification is closed without completion
   };
 
   const handleBackFromBirthday = () => {
     setShowBirthday(false);
+    setShowHomeContent(true); // Show home content after birthday celebration
   };
 
   return (
@@ -45,14 +48,17 @@ const Home = () => {
         <Loading onLoaded={() => setIsLoaded(true)} />
       ) : (
         <>
-          <div className={`main-content ${showVerification || showBirthday ? 'blurred' : ''}`}>
-            <Navbar />
-            <Hero />
-            <Moments />
-            <Letter />
-          </div>
+          {/* Show home content ONLY after birthday celebration */}
+          {showHomeContent && (
+            <div className="main-content">
+              <Navbar />
+              <Hero />
+              <Moments />
+              <Letter />
+            </div>
+          )}
           
-          {/* Verification Game Popup */}
+          {/* Verification Game Popup - Shows first after loading */}
           {showVerification && (
             <VerificationGame 
               onVerify={handleVerificationComplete}
@@ -61,26 +67,59 @@ const Home = () => {
             />
           )}
           
-          Birthday Surprise after verification win
+          {/* Birthday Surprise after verification win */}
           {showBirthday && (
             <HappyBirthday onBack={handleBackFromBirthday} />
           )}
           
-          {/* {!verificationCompleted && !showVerification && !showBirthday && (
-            <div className="verification-reminder">
-              <button 
-                className="reminder-btn"
-                onClick={() => setShowVerification(true)}
-              >
-                🎮 Unlock Full Experience
-              </button>
+          {/* Show verification reminder if user skipped verification */}
+          {!verificationCompleted && !showVerification && !showBirthday && !showHomeContent && (
+            <div className="verification-reminder" style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(0,0,0,0.8)',
+              zIndex: 10000
+            }}>
+              <div style={{
+                background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%)',
+                padding: '40px',
+                borderRadius: '20px',
+                textAlign: 'center',
+                color: 'white',
+                maxWidth: '400px',
+                margin: '20px'
+              }}>
+                <h2>🎮 Welcome! 🎮</h2>
+                <p>Complete the verification to access the full birthday experience!</p>
+                <button 
+                  onClick={() => setShowVerification(true)}
+                  style={{
+                    background: 'linear-gradient(135deg, #ff6b6b, #ee5a52)',
+                    color: 'white',
+                    border: 'none',
+                    padding: '12px 25px',
+                    borderRadius: '25px',
+                    fontSize: '1rem',
+                    cursor: 'pointer',
+                    marginTop: '20px',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  Start Verification
+                </button>
+              </div>
             </div>
-          )} */}
+          )}
         </>
       )}
     </>
   );
 };
-
 
 export default Home;

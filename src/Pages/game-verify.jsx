@@ -294,7 +294,7 @@ const IntroScreen = ({ score, lives, completedGames, onStartGame, onClose }) => 
         🎮 Start Challenge
       </motion.button>
 
-      <motion.button
+      {/* <motion.button
         className="close-button"
         onClick={onClose}
         initial={{ y: 20, opacity: 0 }}
@@ -302,7 +302,7 @@ const IntroScreen = ({ score, lives, completedGames, onStartGame, onClose }) => 
         transition={{ delay: 0.8 }}
       >
         Maybe later? 😉
-      </motion.button>
+      </motion.button> */}
     </div>
   );
 };

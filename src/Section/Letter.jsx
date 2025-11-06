@@ -168,9 +168,11 @@ const Letter = () => {
                   transition={{ delay: 0.4 }}
                 >
                   <p>
+                    Dear My Dearest Baby,
+
                     Thank you for everything you’ve done for me up until now. I’ll treasure every memory we’ve built together ---- you’ve already become such an important part of my life, and I’m truly thankful and glad that I met you.
-                    So I want to say Happy Birthday, byy! Thank you for being born ---- you’ve made my life so colorful (char 😆). You grow cuter and cuter every time we meet. I hope I can hold your hands and feel you again soon. I miss youu, and I love youuu so much!
-                    Once again, Happy Birthday! I hope you had a wonderful time today. I’m sorry I couldn’t be there to celebrate with you.💖
+                    So I want to say Happy Birthday 22nd byy! Time run so fast - Tiguwang nkay ta byy. Thank you for being born ---- you’ve made my life so colorful (char 😆). You grow cuter and cuter every time we meet. I hope I can hold your hands and feel you again soon. I miss youu, and I love youuu so much!
+                    Once again, Happy Birthday! I hope you had a wonderful time today. I’m sorry I couldn’t be there to celebrate with you --- I'll try to surprise you when we meet.💖
                   </p>
                   
                   <motion.div 

@@ -25,85 +25,103 @@ const Moments = () => {
   const bgCloud2Y = useTransform(smoothProgress, [0, 1], [0, 150]);  // Medium
   const bgCrystalY = useTransform(smoothProgress, [0, 1], [0, -200]); // Fast (opposite direction)
 
-  const cards = [
-    {
-      id: 1,
-      image: "/images/4.jpg",
-      title: "Adventure Begins",
-      desc: "Every journey starts with a single step — embrace the unknown and let your spirit wander.",
-      parallaxSpeed: -50, // Moves up slowly
-    },
-    {
-      id: 2,
-      image: "/images/4.jpg",
-      title: "Adventure Begins",
-      desc: "Every journey starts with a single step — embrace the unknown and let your spirit wander.",
-      parallaxSpeed: -60, // Moves up slowly
-    },
-    {
-      id: 3,
-      image: "/images/4.jpg",
-      title: "Adventure Begins",
-      desc: "Every journey starts with a single step — embrace the unknown and let your spirit wander.",
-      parallaxSpeed: -70, // Moves up slowly
-    },
-    {
-      id: 4,
-      image: "/images/4.jpg",
-      title: "Adventure Begins",
-      desc: "Every journey starts with a single step — embrace the unknown and let your spirit wander.",
-      parallaxSpeed: -80, // Moves up slowly
-    },
-    {
-      id: 5,
-      image: "/images/4.jpg",
-      title: "Adventure Begins",
-      desc: "Every journey starts with a single step — embrace the unknown and let your spirit wander.",
-      parallaxSpeed: -90, // Moves up slowly
-    },
-    {
-      id: 6,
-      image: "/images/2.jpg",
-      title: "Winds of Freedom",
-      desc: "Let the breeze carry your dreams across endless skies.",
-      parallaxSpeed: -100, // Moves up medium speed
-    },
-    {
-      id: 7,
-      image: "/images/3.jpg",
-      title: "Celestial Harmony",
-      desc: "Find balance between serenity and power — a true hero knows both.",
-      parallaxSpeed: -110, // Moves up fast
-    },
-    {
-      id: 8,
-      image: "/images/3.jpg",
-      title: "Celestial Harmony",
-      desc: "Find balance between serenity and power — a true hero knows both.",
-      parallaxSpeed: -120, // Moves up fast
-    },
-    {
-      id: 9,
-      image: "/images/3.jpg",
-      title: "Celestial Harmony",
-      desc: "Find balance between serenity and power — a true hero knows both.",
-      parallaxSpeed: -130, // Moves up fast
-    },
-    {
-      id: 10,
-      image: "/images/3.jpg",
-      title: "Celestial Harmony",
-      desc: "Find balance between serenity and power — a true hero knows both.",
-      parallaxSpeed: -140, // Moves up fast
-    },
-    {
-      id: 11,
-      image: "/images/3.jpg",
-      title: "Celestial Harmony",
-      desc: "Find balance between serenity and power — a true hero knows both.",
-      parallaxSpeed: -150, // Moves up fast
-    },
-  ];
+ const cards = [
+  {
+    id: 1,
+    image: "/images/9.png", 
+    title: "First Hangout Together",
+    desc: "We attended Saikoufest — I never expected you would invite or accompany me to this event. I was so nervous and scared, yet excited to spend time and get to know you more.",
+    parallaxSpeed: -50,
+  },
+  {
+    id: 2,
+    image: "/images/22.jpg", 
+    title: "Maimai",
+    desc: "Somehow, Maimai became a bridge for us to get closer. I was a bit competitive back then, but I’m proud and amazed at how much you’ve improved every time we play.",
+    parallaxSpeed: -80,
+  },
+  {
+    id: 3,
+    image: "/images/7.jpg",
+    title: "Arcchon", 
+    desc: "Maybe the most expensive event we attended — and though it was a bit disappointing, it didn’t matter. Seeing you in a maid outfit was worth it; you looked so cute!",
+    parallaxSpeed: -120,
+  },
+  {
+    id: 4,
+    image: "/images/15.JPG",
+    title: "My Cutie Baby in a Maid Outfit",
+    desc: "I never expected you’d actually wear a maid outfit or even take an interest in it. You looked so adorable and cute that time!",
+    parallaxSpeed: -150,
+  },
+  {
+    id: 5,
+    image: "/images/12.jpg",
+    title: "3rd Acquaintance Party",
+    desc: "I didn’t include our first acquaintance party, but I still remember this one clearly. You hadn’t slept because you were preparing the video for the event — it turned out so well! Your effort truly paid off, even if you felt it wasn’t enough.",
+    parallaxSpeed: -180,
+  },
+  {
+    id: 6,
+    image: "/images/25.jpg",
+    title: "First Date at Naga",
+    desc: "Our first date together in Naga — we ate ramen and walked around. I never expected it to feel so good to go out with you. Thank you for inviting me.",
+    parallaxSpeed: -220,
+  },
+  {
+    id: 7,
+    image: "/images/26.jpg",
+    title: "Clayne with Glasses",
+    desc: "You looked so handsome and cute wearing glasses. I hope you wear them more often hehe.",
+    parallaxSpeed: -250,
+  },
+  {
+    id: 8,
+    image: "/images/14.jpeg",
+    title: "Last Acquaintance Party",
+    desc: "Our last acquaintance party together — it was a bit disappointing, but at least you won 5 kg of rice! XD",
+    parallaxSpeed: -280,
+  },
+  {
+    id: 9,
+    image: "/images/17.JPG",
+    title: "You're So Cute",
+    desc: "I wish I could relive this moment again. You looked so cute here.",
+    parallaxSpeed: -320,
+  },
+  {
+    id: 10,
+    image: "/images/9-1.jpg",
+    title: "Bon Odori?",
+    desc: "It might not have been the actual Bon Odori festival, but at least we had fun — and I got to eat chocolate-coated bananas with you (though I only took a bite from yours).",
+    parallaxSpeed: -350,
+  },
+  {
+    id: 11,
+    image: "/images/18.JPG",
+    title: "Second Date at Naga",
+    desc: "You looked so exhausted that day since you didn’t get enough sleep. It was raining, but we still pushed through — thank you for spending time with me.",
+    parallaxSpeed: -380,
+  },
+  {
+    id: 12,
+    image: "/images/19.JPG",
+    title: "Clayne’s Cousin’s Wedding",
+    desc: "It was your cousin’s wedding, and once again, you hadn’t slept much. Still, you looked as handsome as ever. I wonder if our wedding someday will feel like this.",
+    parallaxSpeed: -400,
+  },
+  {
+    id: 13,
+    image: "/images/20.JPG",
+    title: "Finally, Bon Odori Festival",
+    desc: "We finally attended the Bon Odori Festival together — thank you for letting me take this picture of you.",
+    parallaxSpeed: -450,
+  },
+];
+
+
+  const sectionRange = 1 / cards.length;
+
 
   return (
     <motion.section 
@@ -150,7 +168,7 @@ const Moments = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1>#HappyMoments</h1>
+          <h1>#Journey</h1>
           <p>Scroll down to relive the memories</p>
           <div className="scroll-indicator">
             <motion.div 
@@ -165,8 +183,11 @@ const Moments = () => {
       {/* Parallax Cards Container */}
       <div className="moments-scroll-container">
         {cards.map((card, index) => {
-          const sectionStart = index * 0.33;
-          const sectionEnd = (index + 1) * 0.33;
+
+          const sectionStart = index * sectionRange;
+          const sectionEnd = (index + 1) * sectionRange;
+          const sectionStartWithOverlap = Math.max(0, sectionStart - 0.05);
+          const sectionEndWithOverlap = Math.min(1, sectionEnd + 0.05);
           
           // Card parallax effect - moves at different speeds
           const cardY = useTransform(
@@ -193,10 +214,10 @@ const Moments = () => {
           const cardOpacity = useTransform(
             smoothProgress,
             [
-              sectionStart - 0.1,
-              sectionStart + 0.1,
-              sectionEnd - 0.1,
-              sectionEnd
+              sectionStartWithOverlap,
+              sectionStart,
+              sectionEnd,
+              sectionEndWithOverlap
             ],
             [0, 1, 1, 0]
           );

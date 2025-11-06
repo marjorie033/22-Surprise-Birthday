@@ -4,9 +4,9 @@ import "../App.css";
 
 const Hero = () => {
   const slides = [
-    { id: 1, image: "/images/1.jpg", caption: "#HappyBirthdayMyLove" },
-    { id: 2, image: "/images/10.jpg", caption: "#Memories" },
-    { id: 3, image: "/images/3.jpg", caption: "#HappyBirthdayMyLove" },
+    { id: 1, image: "/images/10.png", caption: "#HappyBirthdayMyBaby" },
+    { id: 2, image: "/images/13.jpeg", caption: "#🤓👍" },
+    { id: 3, image: "/images/11.png", caption: "#Eppy" },
   ];
 
   const [current, setCurrent] = useState(0);

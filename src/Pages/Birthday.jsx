@@ -167,10 +167,8 @@ const HappyBirthday = ({ onBack }) => {
             style={{
               width: '100%',
               height: '100%',
-              maxWidth: '1100px',
-              maxHeight: '1100px',
-              minWidth: '300px',
-              minHeight: '300px',
+              maxWidth: '1200px',
+              maxHeight: '1200px',
               pointerEvents: 'none',
               marginBottom: '20px',
             }}

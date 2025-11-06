@@ -22,6 +22,7 @@ function ResizeFixer() {
   return null;
 }
 
+
 const HappyBirthday = ({ onBack }) => {
   const canvasRef = useRef(null);
   const audioRef = useRef(null);
@@ -172,8 +173,7 @@ const HappyBirthday = ({ onBack }) => {
         justifyContent: 'center',
         pointerEvents: 'none',
       }}>
-        
-        {/* 3D Cake Model - Centered */}
+        {/* 3D Cake Model */}
         {showCake && (
           <motion.div
             initial={{ opacity: 0, scale: 0.3 }}
@@ -184,24 +184,24 @@ const HappyBirthday = ({ onBack }) => {
               scale: { duration: 1.5 }
             }}
             style={{
-              width: '60vh',
-              height: '60vh',
-              maxWidth: '500px',
-              maxHeight: '500px',
-              minWidth: '300px',
-              minHeight: '300px',
+              width: '100vh',
+              height: '100vh',
+              maxWidth: '600px',
+              maxHeight: '600px',
               pointerEvents: 'none',
-              marginBottom: '20px', // Space between cake and message
+              top: 0,
+              left: 0,
+              zIndex: 10,
             }}
           >
             <Canvas
               camera={{ position: [6, 6, 6], fov: 45 }}
+              
               style={{
                 width: '100%',
                 height: '100%',
               }}
-            >
-              <ResizeFixer />
+            > <ResizeFixer />
               <ambientLight intensity={1} />
               <spotLight position={[10, 15, 10]} angle={0.3} penumbra={1} intensity={1.5} />
               <pointLight position={[-10, -10, -10]} intensity={0.5} />
@@ -237,7 +237,7 @@ const HappyBirthday = ({ onBack }) => {
           </motion.div>
         )}
 
-        {/* Birthday Message Card - Below the cake */}
+        {/* Birthday Message Card */}
         <motion.div 
           className="birthday-message"
           initial={{ scale: 0, opacity: 0, y: 50 }}
@@ -251,15 +251,15 @@ const HappyBirthday = ({ onBack }) => {
           }}
           style={{
             background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%)',
-            padding: '25px 20px',
-            borderRadius: '20px',
+            padding: '30px 25px',
+            borderRadius: '25px',
             boxShadow: `
-              0 20px 60px rgba(0,0,0,0.6),
+              0 25px 80px rgba(0,0,0,0.6),
               0 0 0 1px rgba(255,255,255,0.1),
-              inset 0 0 40px rgba(255,255,255,0.1)
+              inset 0 0 50px rgba(255,255,255,0.1)
             `,
-            maxWidth: '450px',
-            width: '80%',
+            maxWidth: '400px',
+            width: '85%',
             textAlign: 'center',
             color: 'white',
             border: '2px solid rgba(255,255,255,0.2)',
@@ -268,9 +268,9 @@ const HappyBirthday = ({ onBack }) => {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            minHeight: 'auto',
+            minHeight: '280px',
             pointerEvents: 'auto',
-            marginTop: '20px', // Space from cake
+            marginTop: '20px',
           }}
         >
           {/* Audio Control Button */}
@@ -280,16 +280,16 @@ const HappyBirthday = ({ onBack }) => {
             whileTap={{ scale: 0.9 }}
             style={{
               position: 'absolute',
-              top: '12px',
-              right: '12px',
+              top: '15px',
+              right: '15px',
               background: 'rgba(255,255,255,0.2)',
               border: 'none',
               borderRadius: '50%',
-              width: '35px',
-              height: '35px',
+              width: '40px',
+              height: '40px',
               color: 'white',
               cursor: 'pointer',
-              fontSize: '1rem',
+              fontSize: '1.2rem',
               backdropFilter: 'blur(10px)',
               display: 'flex',
               alignItems: 'center',
@@ -305,9 +305,9 @@ const HappyBirthday = ({ onBack }) => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
             style={{
-              fontSize: '1.8rem',
-              marginBottom: '12px',
-              textShadow: '2px 2px 6px rgba(0,0,0,0.5)',
+              fontSize: '2rem',
+              marginBottom: '15px',
+              textShadow: '3px 3px 6px rgba(0,0,0,0.5)',
               background: 'linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #ffa726)',
               backgroundSize: '300% 300%',
               backgroundClip: 'text',
@@ -315,11 +315,11 @@ const HappyBirthday = ({ onBack }) => {
               color: 'transparent',
               animation: 'gradientShift 4s ease infinite',
               fontWeight: 'bold',
-              letterSpacing: '0.5px',
+              letterSpacing: '1px',
               lineHeight: '1.2',
             }}
           >
-            Happy 22nd Birthday!
+            Happy 22nd Birthday byy!
           </motion.h1>
           
           <motion.p
@@ -327,15 +327,16 @@ const HappyBirthday = ({ onBack }) => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.0, duration: 0.8 }}
             style={{
-              fontSize: '0.95rem',
-              marginBottom: '15px',
-              lineHeight: '1.4',
-              textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
+              fontSize: '1rem',
+              marginBottom: '20px',
+              lineHeight: '1.5',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
               fontWeight: '500',
               maxWidth: '90%',
             }}
           >
-            You've officially leveled up in life! Wishing you all the happiness and success in the world.
+          You’ve officially leveled up in life --- and with that, you’ve unlocked this little birthday surprise made just for you!
+          
           </motion.p>
 
           <motion.div
@@ -344,11 +345,11 @@ const HappyBirthday = ({ onBack }) => {
             transition={{ delay: 1.2, duration: 0.8 }}
             className="confetti"
             style={{
-              fontSize: '1.5rem',
-              margin: '10px 0',
+              fontSize: '1.8rem',
+              margin: '15px 0',
               display: 'flex',
               justifyContent: 'center',
-              gap: '8px',
+              gap: '10px',
               flexWrap: 'wrap',
             }}
           >
@@ -363,13 +364,13 @@ const HappyBirthday = ({ onBack }) => {
                   stiffness: 150 
                 }}
                 whileHover={{ 
-                  scale: 1.4, 
+                  scale: 1.6, 
                   rotate: 360,
                   transition: { duration: 0.3 }
                 }}
                 style={{ 
                   display: 'inline-block',
-                  filter: 'drop-shadow(1px 1px 3px rgba(0,0,0,0.3))'
+                  filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))'
                 }}
               >
                 {emoji}
@@ -383,23 +384,23 @@ const HappyBirthday = ({ onBack }) => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.5, duration: 0.6 }}
             whileHover={{ 
-              scale: 1.05,
+              scale: 1.08,
               background: 'linear-gradient(135deg, #4ecdc4, #44a08d)',
-              boxShadow: '0 6px 20px rgba(0,0,0,0.25)'
+              boxShadow: '0 8px 25px rgba(0,0,0,0.3)'
             }}
             whileTap={{ scale: 0.92 }}
             style={{
               background: 'linear-gradient(135deg, #ff6b6b, #ee5a52)',
               color: 'white',
               border: 'none',
-              padding: '10px 22px',
-              borderRadius: '25px',
-              fontSize: '0.9rem',
+              padding: '12px 25px',
+              borderRadius: '30px',
+              fontSize: '1rem',
               cursor: 'pointer',
-              marginTop: '8px',
+              marginTop: '10px',
               fontWeight: 'bold',
               textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
-              boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+              boxShadow: '0 6px 20px rgba(0,0,0,0.25)',
               pointerEvents: 'auto',
             }}
           >
@@ -419,19 +420,19 @@ const HappyBirthday = ({ onBack }) => {
           left: '20px',
           background: 'rgba(0,0,0,0.7)',
           color: 'white',
-          padding: '8px 12px',
-          borderRadius: '15px',
-          fontSize: '0.8rem',
+          padding: '10px 15px',
+          borderRadius: '20px',
+          fontSize: '0.9rem',
           zIndex: 4,
           backdropFilter: 'blur(10px)',
           border: '1px solid rgba(255,255,255,0.2)',
           display: 'flex',
           alignItems: 'center',
-          gap: '6px',
+          gap: '8px',
           pointerEvents: 'auto',
         }}
       >
-        <span style={{ fontSize: '1rem' }}>
+        <span style={{ fontSize: '1.2rem' }}>
           {isPlaying ? '🎵' : '🔇'}
         </span>
         {isPlaying ? 'Birthday music playing...' : 'Music paused'}
@@ -452,33 +453,15 @@ const HappyBirthday = ({ onBack }) => {
           @keyframes pulseGlow {
             from {
               box-shadow: 
-                0 20px 60px rgba(0,0,0,0.6),
+                0 25px 80px rgba(0,0,0,0.6),
                 0 0 0 1px rgba(255,255,255,0.1),
-                inset 0 0 40px rgba(255,255,255,0.1);
+                inset 0 0 50px rgba(255,255,255,0.1);
             }
             to {
               box-shadow: 
-                0 20px 80px rgba(102, 126, 234, 0.4),
+                0 25px 100px rgba(102, 126, 234, 0.4),
                 0 0 0 1px rgba(255,255,255,0.2),
-                inset 0 0 50px rgba(255,255,255,0.15);
-            }
-          }
-
-          /* Responsive adjustments */
-          @media (max-height: 700px) {
-            .birthday-message {
-              padding: 15px 15px;
-              margin-top: 10px;
-            }
-            
-            .birthday-message h1 {
-              font-size: 1.5rem;
-              margin-bottom: 8px;
-            }
-            
-            .birthday-message p {
-              font-size: 0.85rem;
-              margin-bottom: 10px;
+                inset 0 0 60px rgba(255,255,255,0.15);
             }
           }
         `}

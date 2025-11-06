@@ -58,7 +58,7 @@ const Home = () => {
             </div>
           )}
           
-          {/* Verification Game Popup - Shows first after loading */}
+          Verification Game Popup - Shows first after loading
           {showVerification && (
             <VerificationGame 
               onVerify={handleVerificationComplete}
@@ -67,7 +67,7 @@ const Home = () => {
             />
           )}
           
-          {/* Birthday Surprise after verification win */}
+          Birthday Surprise after verification win
           {showBirthday && (
             <HappyBirthday onBack={handleBackFromBirthday} />
           )}

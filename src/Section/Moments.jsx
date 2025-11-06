@@ -35,17 +35,73 @@ const Moments = () => {
     },
     {
       id: 2,
-      image: "/images/2.jpg",
-      title: "Winds of Freedom",
-      desc: "Let the breeze carry your dreams across endless skies.",
-      parallaxSpeed: -80, // Moves up medium speed
+      image: "/images/4.jpg",
+      title: "Adventure Begins",
+      desc: "Every journey starts with a single step — embrace the unknown and let your spirit wander.",
+      parallaxSpeed: -60, // Moves up slowly
     },
     {
       id: 3,
+      image: "/images/4.jpg",
+      title: "Adventure Begins",
+      desc: "Every journey starts with a single step — embrace the unknown and let your spirit wander.",
+      parallaxSpeed: -70, // Moves up slowly
+    },
+    {
+      id: 4,
+      image: "/images/4.jpg",
+      title: "Adventure Begins",
+      desc: "Every journey starts with a single step — embrace the unknown and let your spirit wander.",
+      parallaxSpeed: -80, // Moves up slowly
+    },
+    {
+      id: 5,
+      image: "/images/4.jpg",
+      title: "Adventure Begins",
+      desc: "Every journey starts with a single step — embrace the unknown and let your spirit wander.",
+      parallaxSpeed: -90, // Moves up slowly
+    },
+    {
+      id: 6,
+      image: "/images/2.jpg",
+      title: "Winds of Freedom",
+      desc: "Let the breeze carry your dreams across endless skies.",
+      parallaxSpeed: -100, // Moves up medium speed
+    },
+    {
+      id: 7,
+      image: "/images/3.jpg",
+      title: "Celestial Harmony",
+      desc: "Find balance between serenity and power — a true hero knows both.",
+      parallaxSpeed: -110, // Moves up fast
+    },
+    {
+      id: 8,
       image: "/images/3.jpg",
       title: "Celestial Harmony",
       desc: "Find balance between serenity and power — a true hero knows both.",
       parallaxSpeed: -120, // Moves up fast
+    },
+    {
+      id: 9,
+      image: "/images/3.jpg",
+      title: "Celestial Harmony",
+      desc: "Find balance between serenity and power — a true hero knows both.",
+      parallaxSpeed: -130, // Moves up fast
+    },
+    {
+      id: 10,
+      image: "/images/3.jpg",
+      title: "Celestial Harmony",
+      desc: "Find balance between serenity and power — a true hero knows both.",
+      parallaxSpeed: -140, // Moves up fast
+    },
+    {
+      id: 11,
+      image: "/images/3.jpg",
+      title: "Celestial Harmony",
+      desc: "Find balance between serenity and power — a true hero knows both.",
+      parallaxSpeed: -150, // Moves up fast
     },
   ];
 

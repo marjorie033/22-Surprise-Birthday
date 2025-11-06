@@ -21,9 +21,9 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "Home", href: "#home", icon: "⾕" },
-    { name: "Moments", href: "#moments", icon: "🎞️" },
-    { name: "Gallery", href: "#gallery", icon: "🖼️" },
-    { name: "About", href: "#about", icon: "👤" },
+    { name: "Moments", href: "#moments", icon: "𓇢𓆸" },
+    { name: "Gallery", href: "#gallery", icon: "🖼" },
+    { name: "About", href: "#about", icon: "｡𖦹°‧" },
   ];
 
   return (
@@ -145,7 +145,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
               >
-                <p>Made with 💖</p>
+                <p>Made with 💕(づo v o)づ♡</p>
               </motion.div>
             </motion.div>
           </>

@@ -5,7 +5,7 @@ import "../App.css";
 const Hero = () => {
   const slides = [
     { id: 1, image: "/images/1.jpg", caption: "#HappyBirthdayMyLove" },
-    { id: 2, image: "/images/2.jpg", caption: "#Memories" },
+    { id: 2, image: "/images/10.jpg", caption: "#Memories" },
     { id: 3, image: "/images/3.jpg", caption: "#HappyBirthdayMyLove" },
   ];
 

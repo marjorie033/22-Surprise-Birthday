@@ -165,12 +165,14 @@ const HappyBirthday = ({ onBack }) => {
               scale: { duration: 1.5 }
             }}
             style={{
-              width: '100%',
-              height: '100%',
-              maxWidth: '1200px',
-              maxHeight: '1200px',
+              width: '100vh',
+              height: '100vh',
+              maxWidth: '600px',
+              maxHeight: '600px',
               pointerEvents: 'none',
-              marginBottom: '20px',
+              top: 0,
+              left: 0,
+              zIndex: 10,
             }}
           >
             <Canvas
